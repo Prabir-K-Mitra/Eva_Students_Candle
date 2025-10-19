@@ -1,3 +1,14 @@
+// Redirect to login if not logged in
+/*if (!localStorage.getItem("loggedInUser")) {
+  window.location.href = "login.html";
+}*/
+
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "login.html";
+});
+
+
 // "Database" – names grouped by class
 const classes = {
   class1A: [

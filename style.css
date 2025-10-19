@@ -1,3 +1,49 @@
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #003366, #ffffff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: inset 3px 3px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #003366;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #0055aa;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -7,7 +53,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  background: linear-gradient(to right, #001f4d 0%, #fff 70%, #fff 100%);
+  background: linear-gradient(to right, #fff 0%, #fff 30%, #001f4d 50%, #001f4d 100%);
   box-sizing: border-box;
   z-index: 1000;
   height: 80px;
@@ -15,9 +61,12 @@
 
 .header-title {
   font-family: sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  position: absolute;
   color: #fff;
-  margin-left: 5vw;
+  right: auto;
+  margin-left: 35vw;
+  /*margin-left: 5vw;*/
   line-height: 80px;
 }
 
@@ -27,7 +76,14 @@
   object-fit: contain;
   margin-left: auto;
   top: 0;
-  right: 5vw;
+  /*right: 5vw; */
+  margin-left: 0;
+}
+
+#logoutBtn {
+  position: absolute;
+  right: 2vw;
+  margin: 1vh;
 }
 
 html, body {
