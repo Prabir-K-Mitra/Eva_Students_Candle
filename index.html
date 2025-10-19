@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>candle lighting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <img src="Gym_Tanzenberg.jpg" alt="Logo" class="header-image" />
+    <h1 class="header-title">Wer zündet die Kerze an?</h1>
+  </header>
+  
+  <div class="main-layout">
+    <!-- Left column -->
+    <div class="left-column container">
+      <div id="classSelection">
+        <h2>Select a Class</h2>
+        <select id="classSelect">
+          <option value="">-- Choose a class --</option>
+          <option value="class1A">Class 1A</option>
+          <option value="class1C">Class 1C</option>
+          <option value="class2B">Class 2B</option>
+          <option value="class2D">Class 2D</option>
+          <option value="class3B">Class 3B</option>
+        </select>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <div id="missingSelection" class="hidden">
+        <h2>Select Missing Students</h2>
+        <div id="missingList"></div>
+        <button id="startBtn">Start Generator</button>
+        <button id="backToClass">← Back</button>
+      </div>
+
+      <div id="generatorSection" class="hidden">
+        <h2 id="classTitle"></h2>
+        <p id="classCount"></p>
+        <button id="generateBtn">Generate Random Name</button>
+        <button id="backToMissingSelection" class="back">← Back</button>
+      </div>
+      
+
+    </div>
+
+    <!-- Right column -->
+    <div class="right-column container hidden">
+      <div class="animation-area">
+        <div class="spark-container"></div>
+        <div class="candle hidden">
+          <div class="flame"></div>
+        </div>
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
