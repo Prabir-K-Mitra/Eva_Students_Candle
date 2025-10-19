@@ -163,8 +163,8 @@ document.getElementById("startBtn").addEventListener("click", () => {
     return;
   }
 
-  classTitle.textContent = "Class: " + classSelect.options[classSelect.selectedIndex].text;
-  classCount.textContent = `Active students: ${activeStudents.length}`;
+  classTitle.textContent = "Klasse: " + classSelect.options[classSelect.selectedIndex].text;
+  classCount.textContent = `Anzahl der anwesenden Studierenden: ${activeStudents.length}`;
 
   missingSelection.classList.add("hidden");
   generatorSection.classList.remove("hidden");
