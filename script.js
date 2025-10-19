@@ -63,10 +63,10 @@ const classes = {
     { number: 17, name: "Stefan" },
     { number: 18, name: "Moritz R" },
     { number: 19, name: "Eva" },
-    { number: 20, name: "Benzamin S" },
+    { number: 20, name: "Benjamin S" },
     { number: 21, name: "Moritz S" },
     { number: 22, name: "Tobias" },
-    { number: 23, name: "Benzamin W" },
+    { number: 23, name: "Benjamin W" },
     { number: 24, name: "Ella" }
   ],
   class2D: [
