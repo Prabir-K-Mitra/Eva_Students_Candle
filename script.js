@@ -9,12 +9,12 @@ const TIMEOUT = 15 * 60 * 1000;
 console.log("Script loggedIn User:", localStorage.getItem("loggedIn"));
 
 // --- Redirect if not logged in or session expired ---
-/*if (!loggedIn || now - lastActive > TIMEOUT) {
+if (!loggedIn || now - lastActive > TIMEOUT) {
   localStorage.removeItem("loggedIn");
   localStorage.removeItem("lastActive");
   window.location.href = "login.html";
   console.log("Script: log in not successful, redirecting to login page.")
-}*/
+}
 
 // --- Update last active time on user activity ---
 function resetActivity() {

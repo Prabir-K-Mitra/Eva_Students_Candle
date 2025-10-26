@@ -3,7 +3,7 @@ const users = [
   { username: "admin", password: "admin123" },
 ];
 
-localStorage.setItem("loggedIn", false);
+//localStorage.setItem("loggedIn", false);
 
 console.log("Before login:", localStorage.getItem("loggedIn"));
 
