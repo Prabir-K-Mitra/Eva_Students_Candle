@@ -262,15 +262,113 @@ button:hover {
 }
 
 
-/* Responsive for small screens */
+/* === Mobile-friendly adjustments === */
 @media (max-width: 900px) {
+
+  /* Main layout stack */
   .main-layout {
     flex-direction: column;
     align-items: center;
+    margin: 100px 0 0 0; /* leave space for fixed header */
+    height: auto;
+    gap: 15px;
+    padding: 0 10px;
   }
+
+  /* Columns */
   .left-column,
   .right-column {
-    max-width: 90%;
-    margin-bottom: 20px;
+    max-width: 95%;
+    margin: 10px 0;
+    flex: unset;
+    text-align: center;
+    padding: 15px;
   }
+
+  /* Buttons full width */
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Login container */
+  .login-container {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  /* Header adjustments */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header-title {
+    position: relative;
+    margin: 10px 0 0 0;
+    line-height: normal;
+    font-size: 2rem;
+    color: #001f4d;
+    text-align: center;
+  }
+
+  .header-image {
+    position: relative;
+    margin: 10px 0;
+    height: 50px;
+  }
+
+  #logoutBtn {
+    position: relative;
+    right: 0;
+    margin: 10px 0;
+  }
+
+  /* Candle & flame adjustments */
+  .candle {
+    width: 10vw;
+    height: 25vh;
+    top: auto;
+    bottom: 0;
+  }
+
+  .flame {
+    width: 10vw;
+    height: 12vh;
+    top: -12vh;
+  }
+
+  /* Result text */
+  .result {
+    font-size: 3em;
+    margin-top: 15px;
+  }
+
+  /* Animation area smaller */
+  .animation-area {
+    height: 35vh;
+    margin-top: 15px;
+  }
+}
+
+/* Optional: Small screens below 500px */
+@media (max-width: 500px) {
+  .login-container input,
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .result {
+    font-size: 2em;
+  }
+
 }
