@@ -1,10 +1,44 @@
-// Redirect to login if not logged in
-/*if (!localStorage.getItem("loggedInUser")) {
+console.log("In index page.")
+
+const loggedIn = localStorage.getItem("loggedIn");
+const lastActive = parseInt(localStorage.getItem("lastActive")) || 0;
+const now = Date.now();
+const TIMEOUT = 15 * 60 * 1000;
+
+
+console.log("Script loggedIn User:", localStorage.getItem("loggedIn"));
+
+// --- Redirect if not logged in or session expired ---
+/*if (!loggedIn || now - lastActive > TIMEOUT) {
+  localStorage.removeItem("loggedIn");
+  localStorage.removeItem("lastActive");
   window.location.href = "login.html";
+  console.log("Script: log in not successful, redirecting to login page.")
 }*/
+
+// --- Update last active time on user activity ---
+function resetActivity() {
+  localStorage.setItem("lastActive", Date.now());
+}
+
+["click", "mousemove", "keypress", "scroll", "touchstart"].forEach(event => {
+  document.addEventListener(event, resetActivity);
+});
+
+// --- Periodic check for inactivity ---
+setInterval(() => {
+  const last = parseInt(localStorage.getItem("lastActive")) || 0;
+  if (Date.now() - last > TIMEOUT) {
+    alert("Session expired. Redirecting to login...");
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("lastActive");
+    window.location.href = "login.html";
+  }
+}, 60000);
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
+  localStorage.removeItem("loggedIn");
   window.location.href = "login.html";
 });
 
