@@ -144,10 +144,12 @@ button:hover {
 
 /* Result display */
 .result {
+  position: relative;
   margin-top: 20px;
   font-size: 5em;
   font-weight: bold;
   text-align: center;
+  z-index: 7;
 }
 
 /* Hidden sections */
@@ -269,10 +271,16 @@ button:hover {
   .main-layout {
     flex-direction: column;
     align-items: center;
-    margin: 100px 0 0 0; /* leave space for fixed header */
+    margin: 200px 0 0 0; /* leave space for fixed header */
     height: auto;
     gap: 15px;
     padding: 0 10px;
+  }
+
+  .login-container input,
+  button {
+    font-size: 1.2rem;
+    padding: 0;
   }
 
   /* Columns */
@@ -303,8 +311,9 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
-    padding: 10px;
+    height: 200px;
+    padding: 0px;
+    background: linear-gradient(to bottom, #fff 0%, #fff 40%,  #001f4d 100%);
   }
 
   .header-title {
@@ -312,13 +321,13 @@ button:hover {
     margin: 10px 0 0 0;
     line-height: normal;
     font-size: 2rem;
-    color: #f00;
+    color: #001f4d;
     text-align: center;
   }
 
   .header-image {
     position: relative;
-    margin: 10px 0;
+    margin: 0;
     height: 50px;
   }
 
@@ -360,7 +369,7 @@ button:hover {
   .login-container input,
   button {
     font-size: 1rem;
-    padding: 10px;
+    padding: 0;
   }
 
   .header-title {
